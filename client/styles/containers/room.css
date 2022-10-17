@@ -1,0 +1,32 @@
+.room {
+  position: relative;
+  height: 100%;
+  display: flex;
+  background: #f2f2f2;
+  overflow: hidden;
+}
+.room-wrap {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+/* darkmode */
+.room.dark {
+  background: #191d24;
+}
+
+@media screen and (max-width: 768px) {
+  .room {
+    position: absolute;
+    width: 100%;
+    transform: translate(100%, 0);
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s;
+    z-index: 9;
+  }
+
+  .room.active {
+    transform: translate(0, 0);
+  }
+}

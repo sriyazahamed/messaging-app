@@ -1,0 +1,134 @@
+.login {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s;
+  opacity: 0;
+  z-index: 0;
+}
+.login.active {
+  opacity: 1;
+  z-index: 1;
+}
+.response {
+  transform: translate(0, 10px);
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s;
+  opacity: 0;
+}
+.response.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.login-wrap {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 20px 15px;
+}
+h1, h3 {
+  font-family: averta-bold;
+}
+.header p {
+  margin: 10px 0 0 0;
+  opacity: 0.8;
+}
+.control {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 0 0;
+}
+.control .cards {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid #00000070;
+  cursor: pointer;
+}
+.control .input-field {
+  display: grid;
+}
+.control .label {
+  margin: 10px 0 0 0;
+}
+.control input {
+  width: 100%;
+  padding: 5px 0 10px 0;
+}
+.control input::placeholder {
+  color: #00000070;
+}
+.action {
+  margin: 10px 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.action .remember {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.remember-check {
+  width: 15px; height: 15px;
+  border: 1px solid #212121;
+  border-radius: 50%;
+}
+.forgot {
+  cursor: pointer;
+}
+.submit {
+  display: flex;
+}
+.submit .btn {
+  color: #ffffff;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: #393E46;
+  padding: 10px 10px 10px 15px;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+.forgot {
+  text-decoration: underline;
+}
+.footer {
+  display: flex;
+  gap: 5px;
+  margin: 40px 0 0 0;
+}
+.footer .btn {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.response {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 10px 0;
+  opacity: 0;
+}
+.response.active {
+  opacity: 1;
+}
+
+/* darkmode */
+.login.dark {
+  background: #222831;
+}
+.login.dark .control .cards {
+  border-color: #393E46;
+}
+.login.dark * {
+  color: #ffffffdd;
+}
+.login.dark .remember-check {
+  border-color: #ffffffdd;
+}
+.login.dark .control input::placeholder {
+  color: #ffffff70;
+}

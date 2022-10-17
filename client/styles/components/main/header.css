@@ -1,0 +1,121 @@
+.header {
+  display: grid;
+  gap: 20px;
+  background: #ffffff;
+  z-index: 1;
+}
+.top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.focused {
+  position: absolute;
+  width: 100%; height: 100%;
+  background: #222831;
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.2s;
+  opacity: 0;
+  z-index: -1;
+}
+.focused.active {
+  opacity: 1;
+  z-index: 1;
+}
+.focused-wrap {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+.focused .btn {
+  width: 35px; height: 35px;
+  border-radius: 50%;
+}
+.focused .left .count {
+  width: 25px; height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 20px;
+  font-family: var(--font-body)
+}
+.focused .right, .focused .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.top .title {
+  margin: 10px 0 0 15px;
+}
+.navigation {
+  margin: 10px 5px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 15px 10px 15px;
+}
+.search-bar .icon {
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-bar .form-control::placeholder {
+  color: #00000070;
+}
+.btn {
+  width: 35px; height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 50%;
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.1s;
+  cursor: pointer;
+}
+.btn * {
+  margin: auto;
+}
+.btn.active {
+  background: #e9e9e9;
+}
+.btn:hover {
+  background: #e9e9e9;
+}
+.form-control {
+  background: transparent;
+  border-radius: 0;
+  width: 100%;
+  padding: 5px 0;
+}
+.call-connected {
+  display: none;
+}
+.call-connected.active {
+  display: flex;
+}
+
+/* darkmode */
+.header.dark {
+  background: #222831;
+}
+.header.dark .search-bar .form-control::placeholder {
+  color: #ffffff70;
+}
+.header.dark .search-bar .form-control {
+  color: #ffffffdd;
+}
+.header.dark .btn.active {
+  background: #393E46;
+}
+.header.dark .btn:hover {
+  background: #393E46;
+}

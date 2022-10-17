@@ -1,0 +1,104 @@
+.register {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s;
+  opacity: 0;
+  z-index: 0;
+  background: #ffffff;
+}
+.register.active {
+  opacity: 1;
+  z-index: 1;
+}
+.register-wrap {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 20px 15px;
+}
+h1, h3 {
+  font-family: averta-bold;
+}
+.header p {
+  margin: 10px 0 0 0;
+  opacity: 0.8;
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 0 0;
+}
+.form .cards {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid #393E4670;
+}
+.form .input-field {
+  display: grid;
+}
+.form .label {
+  margin: 10px 0 0 0;
+}
+.form input {
+  padding: 5px 0 10px 0;
+}
+.form input::placeholder {
+  color: #00000070;
+}
+.submit {
+  display: flex;
+}
+.submit .btn {
+  color: #ffffff;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: #393E46;
+  padding: 10px 10px 10px 15px;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+.forgot {
+  text-decoration: underline;
+}
+.footer {
+  display: flex;
+  gap: 5px;
+  margin: 40px 0 0 0;
+}
+.footer .btn {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.response {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 10px 0 20px 0;
+  opacity: 0;
+}
+.response.active {
+  opacity: 1;
+}
+
+/* darkmode */
+.register.dark {
+  background: #222831;
+}
+.register.dark .form .cards {
+  border-color: #393E46;
+}
+.register.dark * {
+  color: #ffffffdd;
+}
+.register.dark .form input::placeholder {
+  color: #ffffff70;
+}

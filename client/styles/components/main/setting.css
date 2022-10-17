@@ -1,0 +1,126 @@
+.setting {
+  position: absolute;
+  width: 100%; height: 100%;
+  background: #ffffff;
+  transform: translate(-100%, 0);
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  z-index: 1;
+}
+.setting.active {
+  transform: translate(0, 0);
+}
+.navigation {
+  padding: 0 15px 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 70px;
+}
+.navigation .btn {
+  width: 35px; height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.navigation .btn:hover {
+  background: #e9e9e9;
+}
+.navigation .title {
+  font-family: var(--font-body);
+}
+.setting-wrap {
+  display: grid;
+  gap: 30px;
+  overflow-y: auto;
+}
+.theme {
+  padding: 10px 15px;
+  margin: 20px 0;
+}
+.section .label {
+  font-family: var(--font-body);
+  margin: 0 0 0 15px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 25px;
+  border-bottom: 1px solid #e9e9e9;
+  padding: 20px 15px;
+  cursor: pointer;
+}
+.cards:hover {
+  background: #f2f2f270;
+}
+.section:nth-last-of-type(1) .cards:nth-last-of-type(1) {
+  border: none;
+}
+.cards .text {
+  display: grid;
+  gap: 2px;
+}
+.cards .text .title {
+  font-family: var(--font-body);
+}
+.cards .text .paragraf {
+  color: #000000bb;
+}
+.cards .check {
+  display: block;
+  display: flex;
+  justify-content: flex-start;
+  width: 40px; height: 20px;
+  background: #e9e9e9;
+  border-radius: 10px;
+}
+.cards .check .dot {
+  display: block;
+  width: 20px; height: 20px;
+  background: #393E46;
+  border-radius: 50%;
+}
+.setting-wrap::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* darkmode */
+.setting.dark {
+  background: #222831;
+}
+.setting.dark .setting-wrap::-webkit-scrollbar-thumb {
+  background: #3f4958bb;
+}
+.setting.dark .setting-wrap::-webkit-scrollbar-thumb:hover {
+  background: #3f4958;
+}
+.setting.dark .navigation .btn:hover {
+  background: #393E46;
+}
+.setting.dark .cards {
+  border-color: #393E46;
+}
+.setting.dark .cards:hover {
+  background: #34394170;
+}
+.setting.dark .cards .text .paragraf {
+  color: #ffffffdd;
+}
+.setting.dark .check {
+  background: #50555f;
+}
+.setting.dark .check .dot {
+  background: #ffffffdd;
+}
+
+.cards:nth-child(1) .check {
+  background: #00a19e50;
+  justify-content: flex-end;
+}
+.cards:nth-child(1) .check .dot {
+  background: #00A19D;
+}

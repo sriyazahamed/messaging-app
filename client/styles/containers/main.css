@@ -1,0 +1,26 @@
+.main {
+  position: relative;
+  height: 100%;
+  display: flex;
+  overflow-y: hidden;
+  z-index: 1;
+}
+
+.main-wrap {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    position: absolute;
+    width: 100%;
+    transform: translate(0, 0);
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s;
+  }
+
+  .main.active {
+    transform: translate(-100%, 0);
+  }
+}

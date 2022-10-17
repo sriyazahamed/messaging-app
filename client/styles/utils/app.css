@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&display=swap');
+
+:root {
+  --font-body: 'Heebo', sans-serif;
+}
+
+* {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea,
+button,
+p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-body);
+}
+
+.app {
+  position: absolute;
+  width: 100%; height: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  background: #ffffff;
+  color: #000000;
+}
+
+.app.active {
+  position: absolute;
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.multiple {
+  position: absolute;
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 8;
+}
+.multiple-wrap {
+  width: 500px;
+  text-align: center;
+  margin: 0 20px;
+  display: grid;
+  gap: 10px;
+}
+.multiple .title .skin {
+  color: #FF6768;
+}
+.load {
+  position: absolute;
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  z-index: 9;
+}
+input:-webkit-autofill {
+  transition: "color 9999s ease-out, background-color 9999s ease-out";
+  transition-delay: 9999s;
+}
+
+/* darkmode */
+.app.dark {
+  background: #222831;
+  color: #ffffffdd;
+}
+.multiple.dark {
+  background: #222831;
+}
+.load.dark {
+  background: #222831;
+}
+
+@media screen and (max-width: 1000px)  {
+  .app {
+    grid-template-columns: 0.6fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  input,
+  textarea,
+  button,
+  p,
+  body {
+    font-size: 0.9rem;
+  }
+  
+  body {
+    overflow: hidden;
+  }
+
+  .app {
+    display: flex;
+    overflow: hidden;
+  }
+}

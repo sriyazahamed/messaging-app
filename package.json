@@ -1,0 +1,71 @@
+{
+  "name": "messaging-app",
+  "version": "1.0.0",
+  "description": "web based real-time instant messaging application",
+  "main": "server/index.js",
+  "scripts": {
+    "server-start": "node server/index.js",
+    "server-dev": "nodemon server/index.js",
+    "client-serve": "webpack serve --mode=development --config ./webpack.config.js --open",
+    "client-build": "webpack --mode=production",
+    "dev": "concurrently \"npm run server-dev\" \"npm run client-serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/febriadj/messaging-app.git"
+  },
+  "keywords": [
+    "instant-messaging",
+    "real-time-app",
+    "web-based"
+  ],
+  "author": "febriadji <iamfebriadji@gmail.com> (https://febriadji.herokuapp.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/febriadj/messaging-app/issues"
+  },
+  "homepage": "https://github.com/febriadj/messaging-app#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-wildcard": "^7.0.0",
+    "css-loader": "^6.5.1",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "file-loader": "^6.2.0",
+    "nodemon": "^2.0.15",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "boxicons": "^2.0.9",
+    "concurrently": "^6.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "emoji-picker-react": "^3.4.8",
+    "express": "^4.17.1",
+    "formidable": "^2.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^6.0.12",
+    "ngrok": "^4.2.2",
+    "nodemailer": "^6.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "socket.io": "^4.3.2",
+    "socket.io-client": "^4.3.2",
+    "uuid": "^8.3.2"
+  }
+}

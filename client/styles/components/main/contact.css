@@ -1,0 +1,122 @@
+.contact {
+  position: absolute;
+  width: 100%; height: 100%;
+  background: #ffffff;
+  transform: translate(-100%, 0);
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s;
+  z-index: 1;
+  overflow-y: hidden;
+}
+.contact.active {
+  transform: translate(0, 0);
+}
+.contact-wrap {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  height: 70px;
+  padding: 0 10px;
+}
+.navigation .btn {
+  width: 35px; height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.navigation .btn:hover {
+  background: #e9e9e9bb;
+}
+.navigation .title {
+  font-family: var(--font-body);
+}
+.new {
+  display: grid;
+  z-index: 1;
+}
+.new .cards {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #e9e9e9;
+}
+.new .cards:hover {
+  background: #F2F2F270;
+}
+.new .cards .icon {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FF6768;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.list .cards {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-bottom: 1px solid #e9e9e9;
+  cursor: pointer;
+}
+.list .cards:hover {
+  background: #F2F2F270;
+}
+.list .cards .avatar {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+}
+.list .cards .profile-name {
+  font-family: var(--font-body);
+}
+.list .cards .username {
+  opacity: 0.5;
+  margin: 2px 0 0 0;
+}
+.list::-webkit-scrollbar {
+  width: 8px;
+}
+.list::-webkit-scrollbar-thumb {
+  background: #bdbdbdbb;
+}
+.list::-webkit-scrollbar-thumb:hover {
+  background: #bdbdbd;
+}
+
+/* darkmode */
+.contact.dark {
+  background: #222831;
+}
+.contact.dark .cards {
+  border-bottom: 1px solid #343941;
+}
+.contact.dark .new .cards .icon {
+  background: #FF6768;
+}
+.contact.dark .navigation .btn:hover {
+  background: #393E46;
+}
+.contact.dark .cards:hover {
+  background: #34394170;
+}
+.contact.dark .list::-webkit-scrollbar-thumb {
+  background: #3f4958bb;
+}
+.contact.dark .list::-webkit-scrollbar-thumb:hover {
+  background: #3f4958;
+}
